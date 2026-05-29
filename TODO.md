@@ -1,0 +1,4 @@
+- [x] Insert GCash certificate image (assets/certificates/gcash.jpg) into Certificates gallery in index.html
+- [x] Provide a title + short description for the modal and card (data-certificate-title / data-certificate-meta)
+- [x] Verify responsiveness: certificate-card layout and modal image use existing CSS (no breaking changes)
+- [x] Run quick local check (optional): open index.html in browser
