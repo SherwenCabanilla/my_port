@@ -212,177 +212,162 @@
           <p class="eyebrow">Skills</p>
           <h2>Tools and technologies I work with.</h2>
         </div>
-        <div class="skill-list" data-aos="fade-up" data-aos-delay="120">
-          <span>Flutter</span>
-          <span>Firebase</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>PHP</span>
-          <span>MySQL</span>
-          <span>Responsive Design</span>
-          <span>Dashboard UI</span>
-          <span>Git</span>
-          <span>Canva</span>
-          <span>Problem Solving</span>
+        <div class="skill-groups" data-aos="fade-up" data-aos-delay="120">
+          <article class="skill-group">
+            <p>Mobile and backend</p>
+            <h3>App Development</h3>
+            <div class="skill-list">
+              <span>Flutter</span>
+              <span>Firebase</span>
+            </div>
+          </article>
+          <article class="skill-group">
+            <p>Frontend and data</p>
+            <h3>Web Systems</h3>
+            <div class="skill-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>Bootstrap</span>
+              <span>PHP</span>
+              <span>Laravel</span>
+              <span>MySQL</span>
+            </div>
+          </article>
+          <article class="skill-group">
+            <p>Build quality</p>
+            <h3>Design and Workflow</h3>
+            <div class="skill-list">
+              <span>Responsive Design</span>
+              <span>Git</span>
+              <span>Canva</span>
+              <span>Problem Solving</span>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="section certificates-section" id="certificates">
         <div class="certificate-heading" data-aos="fade-up">
           <div class="section-heading wide">
-            <p class="eyebrow">Certificates</p>
-            <h2>Training and achievements that support my work.</h2>
+            <h2>Certificates</h2>
           </div>
-          <p>
-            Cybersecurity, networking, IT seminar, and OJT certificates
-            presented as a gallery so each credential is easy to read and open
-            full-size.
-          </p>
         </div>
 
-        <div class="certificate-showcase">
+        <div class="certificate-carousel" data-aos="fade-up">
+          <button
+            class="certificate-nav certificate-nav-prev"
+            type="button"
+            data-certificate-prev
+            aria-label="Previous certificate"
+          >
+            &lsaquo;
+          </button>
           <article
-            class="certificate-card certificate-featured"
-            data-aos="fade-up"
+            class="certificate-card certificate-slide"
             tabindex="0"
             role="button"
-            data-certificate-src="assets/certificates/s1.png"
-            data-certificate-title="Ethical Hacker"
-            data-certificate-meta="Cisco Networking Academy, completed December 2, 2025."
+            data-certificate-open
+            data-certificate-src="assets/certificates/dost.jpg"
+            data-certificate-title="DOST Scientific Poster Session"
+            data-certificate-meta="Department of Science and Technology - National Academy of Science and Technology, 2026 Mindanao Regional Scientific Meeting, held May 19-20, 2026."
           >
             <div class="certificate-preview">
               <img
-                src="assets/certificates/s1.png"
-                alt="Cisco Networking Academy Ethical Hacker certificate for Sherwen Cabanilla"
+                src="assets/certificates/dost.jpg"
+                alt="DOST NAST certificate of participation for the Mangosense scientific poster session"
+                data-certificate-image
               />
             </div>
             <div class="certificate-info">
-              <span class="certificate-type">Featured credential</span>
-              <h3>Ethical Hacker</h3>
-              <p>Cisco Networking Academy, completed December 2, 2025.</p>
-              <span class="text-link">View certificate</span>
+              <span class="certificate-type" data-certificate-type
+                >DOST NAST</span
+              >
+              <h3 data-certificate-heading>DOST Scientific Poster Session</h3>
+              <p data-certificate-description>
+                2026 Mindanao Regional Scientific Meeting, held May 19-20, 2026.
+              </p>
             </div>
           </article>
+          <button
+            class="certificate-nav certificate-nav-next"
+            type="button"
+            data-certificate-next
+            aria-label="Next certificate"
+          >
+            &rsaquo;
+          </button>
 
-          <div class="certificate-list">
-            <article
-              class="certificate-card certificate-small"
-              data-aos="fade-up"
-              tabindex="0"
-              role="button"
-              data-certificate-src="assets/certificates/ojtcert.jpg"
-              data-certificate-title="On-the-Job Training"
-              data-certificate-meta="Nehemiah Solutions Corporation, issued May 15, 2026."
+          <div class="certificate-controls">
+            <div
+              class="certificate-thumbnails"
+              aria-label="Certificate carousel"
             >
-              <div class="certificate-preview">
+              <button
+                class="certificate-thumb active"
+                type="button"
+                aria-label="Show DOST Scientific Poster Session certificate"
+                aria-current="true"
+                data-certificate-thumb
+                data-certificate-src="assets/certificates/dost.jpg"
+                data-certificate-title="DOST Scientific Poster Session"
+                data-certificate-type="DOST NAST"
+                data-certificate-description="2026 Mindanao Regional Scientific Meeting, held May 19-20, 2026."
+                data-certificate-meta="Department of Science and Technology - National Academy of Science and Technology, 2026 Mindanao Regional Scientific Meeting, held May 19-20, 2026."
+                data-certificate-alt="DOST NAST certificate of participation for the Mangosense scientific poster session"
+              >
+                <img src="assets/certificates/dost.jpg" alt="" />
+              </button>
+              <button
+                class="certificate-thumb"
+                type="button"
+                aria-label="Show Capstone Project Exhibit certificate"
+                data-certificate-thumb
+                data-certificate-src="assets/certificates/BSIT and BSIS Capstone Project Exhibit 2026.png"
+                data-certificate-title="BSIT and BSIS Capstone Project Exhibit 2026"
+                data-certificate-type="Capstone exhibit"
+                data-certificate-description="Certificate from the BSIT and BSIS Capstone Project Exhibit 2026."
+                data-certificate-meta="BSIT and BSIS Capstone Project Exhibit 2026."
+                data-certificate-alt="BSIT and BSIS Capstone Project Exhibit 2026 certificate"
+              >
                 <img
-                  src="assets/certificates/ojtcert.jpg"
-                  alt="On-the-job training certificate from Nehemiah Solutions Corporation for Sherwen Cabanilla"
+                  src="assets/certificates/BSIT and BSIS Capstone Project Exhibit 2026.png"
+                  alt=""
                 />
-              </div>
-              <div class="certificate-info">
-                <span class="certificate-type">OJT certificate</span>
-                <h3>On-the-Job Training</h3>
-                <p>Nehemiah Solutions Corporation, issued May 15, 2026.</p>
-              </div>
-            </article>
-
-            <article
-              class="certificate-card certificate-small"
-              data-aos="fade-up"
-              data-aos-delay="80"
-              tabindex="0"
-              role="button"
-              data-certificate-src="assets/certificates/gcash.jpg"
-              data-certificate-title="GCash"
-              data-certificate-meta="GCash certificate (training credential)."
-            >
-              <div class="certificate-preview">
+              </button>
+              <button
+                class="certificate-thumb"
+                type="button"
+                aria-label="Show BINHI Best Presentation certificate"
+                data-certificate-thumb
+                data-certificate-src="assets/certificates/BINHI 2026 _Best Presentation_ Certificate.jpg"
+                data-certificate-title="BINHI 2026 Best Presentation"
+                data-certificate-type="Best Presentation"
+                data-certificate-description="BINHI 2026 Best Presentation certificate."
+                data-certificate-meta="BINHI 2026 Best Presentation certificate."
+                data-certificate-alt="BINHI 2026 Best Presentation certificate"
+              >
                 <img
-                  src="assets/certificates/gcash.jpg"
-                  alt="GCash certificate for Sherwen Cabanilla"
+                  src="assets/certificates/BINHI 2026 _Best Presentation_ Certificate.jpg"
+                  alt=""
                 />
-              </div>
-              <div class="certificate-info">
-                <span class="certificate-type">Tree planting</span>
-                <h3>GCash</h3>
-                <p>Completed April 5, 2026.</p>
-              </div>
-            </article>
-
-            <article
-              class="certificate-card certificate-small"
-              data-aos="fade-up"
-              data-aos-delay="160"
-              tabindex="0"
-              role="button"
-              data-certificate-src="assets/certificates/s3.png"
-              data-certificate-title="Introduction to Packet Tracer"
-              data-certificate-meta="Cisco Networking Academy, completed January 31, 2024."
-            >
-              <div class="certificate-preview">
-                <img
-                  src="assets/certificates/s3.png"
-                  alt="Cisco Networking Academy Introduction to Packet Tracer certificate for Sherwen Cabanilla"
-                />
-              </div>
-              <div class="certificate-info">
-                <span class="certificate-type">Cisco Networking Academy</span>
-                <h3>Introduction to Packet Tracer</h3>
-                <p>Completed January 31, 2024.</p>
-              </div>
-            </article>
-
-            <article
-              class="certificate-card certificate-small"
-              data-aos="fade-up"
-              data-aos-delay="240"
-              tabindex="0"
-              role="button"
-              data-certificate-src="assets/certificates/s4.png"
-              data-certificate-title="Advanced Seminar: IT Specialist"
-              data-certificate-meta="Davao del Norte State College, completed October 17, 2025."
-            >
-              <div class="certificate-preview">
-                <img
-                  src="assets/certificates/s4.png"
-                  alt="Advanced Seminar Series certificate about journey from science practitioner to information technology specialist"
-                />
-              </div>
-              <div class="certificate-info">
-                <span class="certificate-type"
-                  >Davao del Norte State College</span
-                >
-                <h3>Advanced Seminar: IT Specialist</h3>
-                <p>Completed October 17, 2025.</p>
-              </div>
-            </article>
-
-            <article
-              class="certificate-card certificate-small"
-              data-aos="fade-up"
-              data-aos-delay="320"
-              tabindex="0"
-              role="button"
-              data-certificate-src="assets/certificates/s5.png"
-              data-certificate-title="Advanced Seminar: Graphic Design"
-              data-certificate-meta="Davao del Norte State College, completed November 5, 2025."
-            >
-              <div class="certificate-preview">
-                <img
-                  src="assets/certificates/s5.png"
-                  alt="Advanced Seminar Series certificate about the power of color in graphic design"
-                />
-              </div>
-              <div class="certificate-info">
-                <span class="certificate-type"
-                  >Davao del Norte State College</span
-                >
-                <h3>Advanced Seminar: Graphic Design</h3>
-                <p>Completed November 5, 2025.</p>
-              </div>
-            </article>
+              </button>
+              <button
+                class="certificate-thumb"
+                type="button"
+                aria-label="Show Best Research certificate"
+                data-certificate-thumb
+                data-certificate-src="assets/certificates/BEST RESEARCH.jpg"
+                data-certificate-title="Best Research"
+                data-certificate-type="Research award"
+                data-certificate-description="Best Research certificate."
+                data-certificate-meta="Best Research certificate."
+                data-certificate-alt="Best Research certificate"
+              >
+                <img src="assets/certificates/BEST RESEARCH.jpg" alt="" />
+              </button>
+            </div>
           </div>
         </div>
       </section>

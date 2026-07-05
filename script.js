@@ -2,7 +2,19 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 const navAnchors = document.querySelectorAll(".nav-links a");
 const sections = document.querySelectorAll("main section[id]");
-const certificateCards = document.querySelectorAll("[data-certificate-src]");
+const certificateCards = document.querySelectorAll("[data-certificate-open]");
+const certificateSlide = document.querySelector(".certificate-slide");
+const certificateImage = document.querySelector("[data-certificate-image]");
+const certificateType = document.querySelector("[data-certificate-type]");
+const certificateHeading = document.querySelector("[data-certificate-heading]");
+const certificateDescription = document.querySelector(
+  "[data-certificate-description]",
+);
+const certificateThumbs = Array.from(
+  document.querySelectorAll("[data-certificate-thumb]"),
+);
+const certificatePrev = document.querySelector("[data-certificate-prev]");
+const certificateNext = document.querySelector("[data-certificate-next]");
 const certificateModal = document.querySelector("#certificate-modal");
 const modalImage = document.querySelector(".modal-certificate-image");
 const modalTitle = document.querySelector("#certificate-modal-title");
@@ -31,6 +43,61 @@ navAnchors.forEach((link) => {
     navLinks?.classList.remove("open");
     navToggle?.setAttribute("aria-expanded", "false");
   });
+});
+
+let activeCertificateIndex = 0;
+
+const setActiveCertificate = (index) => {
+  if (
+    !certificateSlide ||
+    !certificateImage ||
+    !certificateType ||
+    !certificateHeading ||
+    !certificateDescription ||
+    !certificateThumbs.length
+  ) {
+    return;
+  }
+
+  activeCertificateIndex =
+    (index + certificateThumbs.length) % certificateThumbs.length;
+
+  const activeThumb = certificateThumbs[activeCertificateIndex];
+  const {
+    certificateSrc,
+    certificateTitle,
+    certificateType: type,
+    certificateDescription: description,
+    certificateMeta,
+    certificateAlt,
+  } = activeThumb.dataset;
+
+  certificateSlide.dataset.certificateSrc = certificateSrc;
+  certificateSlide.dataset.certificateTitle = certificateTitle;
+  certificateSlide.dataset.certificateMeta = certificateMeta;
+  certificateImage.src = certificateSrc;
+  certificateImage.alt = certificateAlt;
+  certificateType.textContent = type;
+  certificateHeading.textContent = certificateTitle;
+  certificateDescription.textContent = description;
+
+  certificateThumbs.forEach((thumb, thumbIndex) => {
+    const isActive = thumbIndex === activeCertificateIndex;
+    thumb.classList.toggle("active", isActive);
+    thumb.setAttribute("aria-current", isActive ? "true" : "false");
+  });
+};
+
+certificateThumbs.forEach((thumb, index) => {
+  thumb.addEventListener("click", () => setActiveCertificate(index));
+});
+
+certificatePrev?.addEventListener("click", () => {
+  setActiveCertificate(activeCertificateIndex - 1);
+});
+
+certificateNext?.addEventListener("click", () => {
+  setActiveCertificate(activeCertificateIndex + 1);
 });
 
 const closeCertificateModal = () => {
@@ -63,6 +130,12 @@ certificateCards.forEach((card) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       openCertificateModal(card);
+    } else if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      setActiveCertificate(activeCertificateIndex - 1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      setActiveCertificate(activeCertificateIndex + 1);
     }
   });
 });
